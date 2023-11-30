@@ -34,4 +34,3 @@ fi
 rm -rf build
 
 exit
-exit
