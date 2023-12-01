@@ -39,5 +39,5 @@ steps:
     azureSubscription: 'Azure subscription 1(344722d6-3177-4c18-ac7d-d88535ac18d2)'
     appType: 'webAppLinux'
     WebAppName: 'springbootjs'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jar'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/complete/target/*.jar'
     RuntimeStack: 'JAVA|11-java11'
