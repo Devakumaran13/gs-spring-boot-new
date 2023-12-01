@@ -32,3 +32,12 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(344722d6-3177-4c18-ac7d-d88535ac18d2)'
+    appType: 'webAppLinux'
+    WebAppName: 'springbootjs'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.jar'
+    RuntimeStack: 'JAVA|11-java11'
