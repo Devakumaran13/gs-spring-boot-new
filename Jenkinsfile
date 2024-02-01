@@ -7,7 +7,6 @@ pipeline {
 		disableConcurrentBuilds()
 		buildDiscarder(logRotator(numToKeepStr: '14'))
 	}
-
 	stages {
 		stage("test: baseline (jdk17)") {
 			agent {
