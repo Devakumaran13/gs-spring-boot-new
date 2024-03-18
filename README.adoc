@@ -204,6 +204,10 @@ If you use Maven, add the following to your `pom.xml` file:
 include::complete/pom.xml[tag=tests]
 ----
 
+---
+Jenkins pipeline
+include:: sh "mvn clean package -f ./complete/pom.xml"
+
 Now write a simple unit test that mocks the servlet request and response through your
 endpoint, as the following listing (from
 `src/test/java/com/example/springboot/HelloControllerTest.java`) shows:
