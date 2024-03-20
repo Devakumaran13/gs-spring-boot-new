@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+- boot-2.7
 
 pool:
   vmImage: ubuntu-latest
@@ -22,3 +22,8 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
     goals: package
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
