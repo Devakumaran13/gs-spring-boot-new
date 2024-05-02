@@ -22,6 +22,7 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
     goals: package
+    
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
