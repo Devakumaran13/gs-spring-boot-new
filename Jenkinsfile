@@ -20,7 +20,6 @@ pipeline {
 				sh 'test/run.sh'				
 			}
 		}
-
 	}
 
 	post {
