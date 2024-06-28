@@ -22,16 +22,3 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
     goals: package
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '/home/vsts/work/1/s/complete/target/'
-    Contents: 'spring-boot-complete-0.0.1-SNAPSHOT.jar'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    CleanTargetFolder: true
-    OverWrite: true
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
