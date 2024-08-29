@@ -21,6 +21,11 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
     goals: package
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '/home/vsts/work/1/s/complete/target/'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
